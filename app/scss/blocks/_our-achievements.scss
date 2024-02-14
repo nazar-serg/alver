@@ -1,0 +1,116 @@
+.our-achievements {
+    padding-bottom: r(80);
+
+    // .our-achievements__container
+
+    &__container {
+    }
+
+    // .our-achievements__title
+
+    &__title {
+        margin-bottom: r(48);
+    }
+
+    // .our-achievements__body
+
+    &__body {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        gap: r(30);
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    // .our-achievements__item
+
+    &__item {
+        background-color: #F0F0F1;
+        border-radius: r(50);
+        @include adaptiveValue("padding", 64, 30, 1268, 1024, 1);
+        
+        &--big {
+            grid-column: 2/4;
+            grid-row: 2/4;
+            display: grid;
+            position: relative;
+            .our-achievements__text {
+                max-width: 100%;
+                @media (max-width: em(375)) {
+                    padding-top: r(84);
+                }
+            }
+            @media (max-width: $mobile) {
+                grid-column: auto;
+                grid-row: auto;
+            }
+            @media (max-width: em(375)) {
+                grid-row: 6;
+            }
+        }
+    }
+
+    // .our-achievements__number
+
+    &__number {
+        font-size: r(66);
+        line-height: math.div(66, 66);
+        font-weight: 900;
+        margin-bottom: r(10);
+        @media (max-width: em(1024)) {
+            @include adaptiveValue("font-size", 50, 36, 1024, 375, 1);
+
+            line-height: math.div(55, 50);
+        }
+        @media (max-width: $tablet) {
+           text-align: center;
+        }
+        @media (max-width: em(375)) {
+            text-align: left;
+        }
+    }
+
+    // .our-achievements__text
+
+    &__text {
+        font-size: r(22);
+        line-height: math.div(30, 22);
+        max-width: r(220);
+        @media (max-width: em(1024)) {
+            font-size: r(17);
+            line-height: math.div(23, 17);
+        }
+        @media (max-width: $tablet) {
+            margin: auto;
+        }
+        @media (max-width: em(375)) {
+            max-width: 100%;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: r(20);
+        margin-top: auto;
+        @media (max-width: $mobile) {
+            margin-top: r(25);
+        }
+        @media (max-width: em(510)) {
+            flex-direction: column-reverse;
+            row-gap: r(15);
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+    &__logo {
+        @media (max-width: em(375)) {
+            position: absolute;
+            top: r(48);
+            left: r(30);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.button {
+    padding: r(16) r(30);
+    height: r(60);
+    border-radius: r(50);
+    color: #fff;
+    font-size: r(20);
+    line-height: math.div(28, 20);
+    font-weight: 700;
+    color: #105EAE;
+    background-color: $mainBg;
+    display: inline-flex;
+    align-items: center;
+    column-gap: r(20);
+    &::after {
+        content: url(../img/arrow-right-blue.svg);
+        margin-top: r(4);
+    }
+    &--blue {
+        background-color: #105EAE;
+        color: white;
+        &::after {
+            content: url(../img/arrow-right-white.svg);
+            margin-top: r(4);
+        }
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+}

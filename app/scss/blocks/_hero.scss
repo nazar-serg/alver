@@ -1,0 +1,78 @@
+.hero {
+    padding-bottom: r(80);
+    // .hero__bg
+
+    &__bg {
+        background: url(../img/hero/hero.jpg) no-repeat;
+        width: 100%;
+        min-height: r(645);
+        background-size: cover;
+        border-radius: r(50);
+        display: flex;
+        align-items: center;
+        @media (max-width: em(375)) {
+            background: url(../img/hero/hero-mob.jpg) no-repeat;
+            min-height: r(806);
+            align-items: start;
+        }
+    }
+
+    // .hero__container
+
+    &__container {
+    
+    }
+
+    // .hero__content
+
+    &__content {
+        padding: r(64);
+        @media (max-width: em(1024)) {
+            padding: r(48) r(30);
+        }
+    }
+
+    // .hero__title
+
+    &__title {
+        font-size: r(66);
+        line-height: math.div(66, 66);
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: r(32);
+        max-width: r(665);
+        @media (max-width: em(1024)) {
+            font-size: r(50);
+            line-height: math.div(55, 50);
+            @include adaptiveValue("font-size", 50, 36, 1024, 375, 1);
+            @include adaptiveValue("margin-bottom", 32, 20, 1024, 375, 1);
+        }
+        @media (max-width: em(375)) {
+            @include adaptiveValue("font-size", 36, 26, 375, 320, 1);
+        }
+    }
+
+    // .hero__text
+
+    &__text {
+        font-size: r(22);
+        line-height: math.div(30, 22);
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: r(64);
+        @media (max-width: em(1024)) {
+            font-size: r(17);
+            line-height: math.div(23, 17);
+            @include adaptiveValue("margin-bottom", 48, 32, 1024, 375, 1);
+        }
+    }
+
+    // .hero__btn
+
+    &__btn {
+    }
+
+    &__link {
+       
+    }
+}

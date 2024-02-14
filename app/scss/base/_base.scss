@@ -1,0 +1,28 @@
+body,
+html {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: r(20);
+}
+
+a {
+    transition: all .2s ease-in-out;
+}
+
+.title {
+    font-size: r(50);
+    line-height: math.div(60, 50);
+    font-weight: 900;
+    color: #1A2334;
+    @media (max-width: em(1024)) { 
+        @include adaptiveValue("font-size", 40, 32, 1024, 375, 1);
+        line-height: math.div(48, 40);
+    }
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
